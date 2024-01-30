@@ -1,0 +1,17 @@
+{
+  "name": "Node.js",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "runArgs": [
+    "--userns=keep-id"
+  ],
+  "containerUser": "node",
+  "containerEnv": {
+    "HOME": "/home/node"
+  },
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/jshint:2": {},
+    "ghcr.io/devcontainers/features/sshd:1": {}
+  }
+  // "postCreateCommand": "yarn install"
+}
